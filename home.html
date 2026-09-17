@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelMate — Find and book the perfect hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fdf9f6;
+        --text: #1c1917;
+        --muted: #78716c;
+        --brand: #b24b00;
+        --brand-hover: #9a3f00;
+        --border: #e7e5e4;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem 4rem 5rem;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 3rem;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--brand);
+      }
+
+      nav {
+        display: flex;
+        gap: 2.5rem;
+      }
+
+      nav a,
+      .login {
+        font-weight: 500;
+        color: #444;
+      }
+
+      nav a:hover,
+      .login:hover {
+        color: var(--brand);
+      }
+
+      .auth {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .signup {
+        background: var(--text);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        font-weight: 500;
+      }
+
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        align-items: flex-start;
+      }
+
+      .copy {
+        flex: 1;
+        max-width: 550px;
+        padding-top: 1rem;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: 1px solid #ddb88c;
+        border-radius: 2rem;
+        color: #a36a00;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background: rgba(221, 184, 140, 0.1);
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 4.5rem;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin-bottom: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.15rem;
+        color: var(--muted);
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+        max-width: 480px;
+      }
+
+      .cta {
+        display: inline-block;
+        background: var(--brand);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+      }
+
+      .cta:hover {
+        background: var(--brand-hover);
+      }
+
+      .proof {
+        border-top: 1px solid var(--border);
+        padding-top: 2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+        max-width: 360px;
+      }
+
+      .proof strong {
+        color: var(--text);
+      }
+
+      .card-col {
+        flex: 1;
+        max-width: 600px;
+      }
+
+      .card {
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      }
+
+      .card img {
+        display: block;
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 0.5rem 0;
+      }
+
+      .card-meta h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .rating {
+        background: #fff;
+        border: 1px solid #f0f0f0;
+        border-radius: 1rem;
+        padding: 0.4rem 0.75rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 900px) {
+        .page {
+          padding: 1.5rem;
+        }
+
+        header,
+        .hero {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="logo">TravelMate</div>
+        <nav>
+          <a href="#destinations">Destinations</a>
+          <a href="#magazine">Magazine</a>
+          <a href="#about">About</a>
+        </nav>
+        <div class="auth">
+          <a class="login" href="#login">Log in</a>
+          <a class="signup" href="#signup">Sign up</a>
+        </div>
+      </header>
+
+      <main class="hero">
+        <section class="copy">
+          <div class="badge">The smart way to travel</div>
+          <h1>Find and book the perfect hotel in minutes</h1>
+          <p class="subtitle">
+            Compare prices, ratings, and booking conditions from multiple
+            platforms in one place — without opening dozens of tabs.
+          </p>
+          <a class="cta" href="#search">Find a hotel</a>
+          <p class="proof">
+            <strong>More than 10,000 travelers</strong> already find
+            accommodation faster with our service.
+          </p>
+        </section>
+
+        <section class="card-col" id="destinations">
+          <article class="card">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"
+              alt="Luxury hotel overlooking the water"
+            />
+          </article>
+          <div class="card-meta">
+            <h2>The Grand Budapest</h2>
+            <span class="rating">★ 4.9</span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
